@@ -86,5 +86,15 @@ const subject = getSubjectFromUrl();
 
 createSubjectTable(subject);
 
+// Nice looking subject name:
+function convertCamelCaseToWords(inputString) {
+  return inputString.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([A-Z])([A-Z][a-z])/g, '$1 $2').replace(/^\w/, c => c.toUpperCase());
+}
+
+let convertedSubject = convertCamelCaseToWords(subject);
+
 const h1Element = document.querySelector("h1");
-h1Element.textContent = `Exams for ${subject}:`;
+h1Element.textContent = `Exams for ${convertedSubject}:`;
+
+const titleElement = document.querySelector("title");
+titleElement.textContent = `${convertedSubject} Exams`;

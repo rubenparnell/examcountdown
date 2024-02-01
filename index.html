@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GCSE Exam Countdown</title>
+    <meta name="description" content="Countdown to the GCSE exams with this helpful website. Select your subjects and track the live countdown."/>
+    <title>GCSE Exam Countdown | Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="menu-styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -25,10 +26,13 @@
         <label><input type="checkbox" id="englishLanguageCheckbox" checked> English Language</label>
 
       <!-- Science Group -->
-        <h3 class="menu-group">Science</h3>
-        <label><input type="checkbox" id="biologyCheckbox" checked> Biology</label>
-        <label><input type="checkbox" id="chemistryCheckbox" checked> Chemistry</label>
-        <label><input type="checkbox" id="physicsCheckbox" checked> Physics</label>
+        <h3 class="menu-group">Sciences</h3>
+        <label><input type="checkbox" id="biologyCheckbox" checked> Seperate Biology</label>
+        <label><input type="checkbox" id="chemistryCheckbox" checked> Seperate Chemistry</label>
+        <label><input type="checkbox" id="physicsCheckbox" checked> Seperate Physics</label>
+        <label><input type="checkbox" id="combinedBiologyCheckbox" checked> Combined Biology</label>
+        <label><input type="checkbox" id="combinedChemistryCheckbox" checked> Combined Chemistry</label>
+        <label><input type="checkbox" id="combinedPhysicsCheckbox" checked> Combined Physics</label>
 
       <!-- Languages Group -->
         <h3 class="menu-group">Languages</h3>
@@ -123,12 +127,12 @@
           </tr>
           <tr>
             <td colspan="7" class="section">
-              <h2 id="scienceHeader">Science</h2>
+              <h2 id="scienceHeader">Sciences</h2>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="exams.html?subject=biology" id="biology" data-section-id="science">Biology</a>
+              <a href="exams.html?subject=biology" id="biology" data-section-id="science">Seperate Biology</a>
             </td>
             <td id="unitTitle-biology"></td>
             <td id="duration-biology"></td>
@@ -137,7 +141,7 @@
           </tr>
           <tr>
             <td>
-              <a href="exams.html?subject=chemistry" id="chemistry" data-section-id="science">Chemistry</a>
+              <a href="exams.html?subject=chemistry" id="chemistry" data-section-id="science">Seperate Chemistry</a>
             </td>
             <td id="unitTitle-chemistry"></td>
             <td id="duration-chemistry"></td>
@@ -146,12 +150,39 @@
           </tr>
           <tr>
             <td>
-              <a href="exams.html?subject=physics" id="physics" data-section-id="science">Physics</a>
+              <a href="exams.html?subject=physics" id="physics" data-section-id="science">Seperate Physics</a>
             </td>
             <td id="unitTitle-physics"></td>
             <td id="duration-physics"></td>
             <td id="date-physics"></td>
             <td id="countdown-physics"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=combinedBiology" id="combinedBiology" data-section-id="science">Combined Biology</a>
+            </td>
+            <td id="unitTitle-combinedBiology"></td>
+            <td id="duration-combinedBiology"></td>
+            <td id="date-combinedBiology"></td>
+            <td id="countdown-combinedBiology"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=combinedChemistry" id="combinedChemistry" data-section-id="science">Combined Chemistry</a>
+            </td>
+            <td id="unitTitle-combinedChemistry"></td>
+            <td id="duration-combinedChemistry"></td>
+            <td id="date-combinedChemistry"></td>
+            <td id="countdown-combinedChemistry"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=combinedPhysics" id="combinedPhysics" data-section-id="science">Combined Physics</a>
+            </td>
+            <td id="unitTitle-combinedPhysics"></td>
+            <td id="duration-combinedPhysics"></td>
+            <td id="date-combinedPhysics"></td>
+            <td id="countdown-combinedPhysics"></td>
           </tr>
           <tr>
             <td colspan="7" class="section">

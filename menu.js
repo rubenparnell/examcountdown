@@ -55,6 +55,18 @@ document.getElementById('physicsCheckbox').addEventListener('change', function()
     updateSubjectVisibility('physics', 'physicsCheckbox');
 });
 
+document.getElementById('combinedBiologyCheckbox').addEventListener('change', function() {
+    updateSubjectVisibility('combinedBiology', 'combinedBiologyCheckbox');
+});
+
+document.getElementById('combinedChemistryCheckbox').addEventListener('change', function() {
+    updateSubjectVisibility('combinedChemistry', 'combinedChemistryCheckbox');
+});
+
+document.getElementById('combinedPhysicsCheckbox').addEventListener('change', function() {
+    updateSubjectVisibility('combinedPhysics', 'combinedPhysicsCheckbox');
+});
+
 document.getElementById('germanCheckbox').addEventListener('change', function() {
     updateSubjectVisibility('german', 'germanCheckbox');
 });
