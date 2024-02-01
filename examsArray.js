@@ -33,7 +33,7 @@ export const exams = [
       subject: "biology",
       unitCode: "8461/1F/H",
       unitTitle: "Biology Paper 1 Tier F/H",
-      durationMins: 105,
+      durationMins: "105/ 75 (combined)",
     },
     {
       date: "2024-05-10",
@@ -141,7 +141,7 @@ export const exams = [
         subject: "chemistry",
         unitCode: "8462/1F/H",
         unitTitle: "Chemistry Paper 1 Tier F/H",
-        durationMins: 105,
+        durationMins: "105/ 75 (combined)",
       },
       {
         date: "2024-05-17",
@@ -204,7 +204,7 @@ export const exams = [
         subject: "physics",
         unitCode: "8463/1F/H",
         unitTitle: "Physics Paper 1 Tier F/H",
-        durationMins: 105,
+        durationMins: "105/ 75 (combined)",
       },
       {
         date: "2024-05-22",
@@ -294,7 +294,7 @@ export const exams = [
         subject: "biology",
         unitCode: "8461/2F/H",
         unitTitle: "Biology Paper 2 Tier F/H",
-        durationMins: 105,
+        durationMins: "105/ 75 (combined)",
       },
       {
         date: "2024-06-10",
@@ -312,7 +312,7 @@ export const exams = [
         subject: "chemistry",
         unitCode: "8462/2F/H",
         unitTitle: "Chemistry Paper 2 Tier F/H",
-        durationMins: 105,
+        durationMins: "105/ 75 (combined)",
       },
       {
         date: "2024-06-11",
@@ -339,7 +339,7 @@ export const exams = [
         subject: "physics",
         unitCode: "8463/2F/H",
         unitTitle: "Physics Paper 2 Tier F/H",
-        durationMins: 105,
+        durationMins: "105/ 75 (combined)",
       },
       {
         date: "2024-06-17",
