@@ -1,323 +1,328 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GCSE Exam Countdown</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="menu-styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <div id="open-menu-btn">&#9776;</div>
+  </head>
+  <body>
+    <div id="open-menu-btn">&#9776;</div>
 
-  <div id="side-menu">
-    <h2>Subjects</h2>
-    <a>Update to show subjects you are studying:</a>
-    <!-- Maths Group -->
-      <h3 class="menu-group">Maths</h3>
-      <label><input type="checkbox" id="mathsCheckbox" checked> Maths</label>
-      <label><input type="checkbox" id="furtherMathsCheckbox" checked> Further Maths</label>
-  
-    <!-- English Group -->
-      <h3 class="menu-group">English</h3>
-      <label><input type="checkbox" id="englishLiteratureCheckbox" checked> English Literature</label>
-      <label><input type="checkbox" id="englishLanguageCheckbox" checked> English Language</label>
+    <div id="side-menu">
+      <h2>Subjects</h2>
+      <a>Update to show subjects you are studying:</a>
+      <!-- Maths Group -->
+        <h3 class="menu-group">Maths</h3>
+        <label><input type="checkbox" id="mathsCheckbox" checked> Maths</label>
+        <label><input type="checkbox" id="furtherMathsCheckbox" checked> Further Maths</label>
+    
+      <!-- English Group -->
+        <h3 class="menu-group">English</h3>
+        <label><input type="checkbox" id="englishLiteratureCheckbox" checked> English Literature</label>
+        <label><input type="checkbox" id="englishLanguageCheckbox" checked> English Language</label>
 
-    <!-- Science Group -->
-      <h3 class="menu-group">Science</h3>
-      <label><input type="checkbox" id="biologyCheckbox" checked> Biology</label>
-      <label><input type="checkbox" id="chemistryCheckbox" checked> Chemistry</label>
-      <label><input type="checkbox" id="physicsCheckbox" checked> Physics</label>
+      <!-- Science Group -->
+        <h3 class="menu-group">Science</h3>
+        <label><input type="checkbox" id="biologyCheckbox" checked> Biology</label>
+        <label><input type="checkbox" id="chemistryCheckbox" checked> Chemistry</label>
+        <label><input type="checkbox" id="physicsCheckbox" checked> Physics</label>
 
-    <!-- Languages Group -->
-      <h3 class="menu-group">Languages</h3>
-      <label><input type="checkbox" id="germanCheckbox" checked> German</label>
-      <label><input type="checkbox" id="frenchCheckbox" checked> French</label>
+      <!-- Languages Group -->
+        <h3 class="menu-group">Languages</h3>
+        <label><input type="checkbox" id="germanCheckbox" checked> German</label>
+        <label><input type="checkbox" id="frenchCheckbox" checked> French</label>
 
-    <!-- Humanities Group -->
-      <h3 class="menu-group">Humanities</h3>
-      <label><input type="checkbox" id="historyCheckbox" checked> History</label>
-      <label><input type="checkbox" id="geographyCheckbox" checked> Geography</label>
-      <label><input type="checkbox" id="religiousStudiesCheckbox" checked> Religious Studies</label>
+      <!-- Humanities Group -->
+        <h3 class="menu-group">Humanities</h3>
+        <label><input type="checkbox" id="historyCheckbox" checked> History</label>
+        <label><input type="checkbox" id="geographyCheckbox" checked> Geography</label>
+        <label><input type="checkbox" id="religiousStudiesCheckbox" checked> Religious Studies</label>
 
-    <!-- Design & Technology Group -->
-      <h3 class="menu-group">Design & Technology</h3>
-      <label><input type="checkbox" id="designTechCheckbox" checked> Design Technology</label>
-      <label><input type="checkbox" id="engineeringCheckbox" checked> Engineering</label>
-      <label><input type="checkbox" id="foodCheckbox" checked> Food</label>
+      <!-- Design & Technology Group -->
+        <h3 class="menu-group">Design & Technology</h3>
+        <label><input type="checkbox" id="designTechCheckbox" checked> Design Technology</label>
+        <label><input type="checkbox" id="engineeringCheckbox" checked> Engineering</label>
+        <label><input type="checkbox" id="foodCheckbox" checked> Food</label>
 
-    <!-- Arts Group -->
-      <h3 class="menu-group">Arts</h3>
-      <label><input type="checkbox" id="dramaCheckbox" checked> Drama</label>
-      <label><input type="checkbox" id="musicCheckbox" checked> Music</label>
+      <!-- Arts Group -->
+        <h3 class="menu-group">Arts</h3>
+        <label><input type="checkbox" id="dramaCheckbox" checked> Drama</label>
+        <label><input type="checkbox" id="musicCheckbox" checked> Music</label>
 
-    <!-- Others Group -->
-      <h3 class="menu-group">Others</h3>
-      <label><input type="checkbox" id="peCheckbox" checked> Physical Education</label>
-      <label><input type="checkbox" id="childDevCheckbox" checked> Child Development</label>
-      <label><input type="checkbox" id="mediaStudiesCheckbox" checked> Media Studies</label>
-      <label><input type="checkbox" id="computerScienceCheckbox" checked> Computer Science</label>
-      <label><input type="checkbox" id="businessCheckbox" checked> Business</label>
-    <br><br>
-  </div>    
-      
+      <!-- Others Group -->
+        <h3 class="menu-group">Others</h3>
+        <label><input type="checkbox" id="peCheckbox" checked> Physical Education</label>
+        <label><input type="checkbox" id="childDevCheckbox" checked> Child Development</label>
+        <label><input type="checkbox" id="mediaStudiesCheckbox" checked> Media Studies</label>
+        <label><input type="checkbox" id="computerScienceCheckbox" checked> Computer Science</label>
+        <label><input type="checkbox" id="businessCheckbox" checked> Business</label>
+      <br><br>
+    </div>   
 
-  <div id="main" centre>
+    <div id="main">
       <h1>Welcome to GCSE Exam Countdown</h1>
-      <p>See the next exam in each subject below, or click on a specific subject to see all upcoming exams.</p>
+      <p>See the next paper for each subject below, or <u>click on a specific subject to see all papers</u>.</p>
       <p>AM exams are set at 09:00, PM exams are set at 13:30.</p>
       <div id="subjects-list">
-          <table id="subjectsTable">
-              <tr>
-                <th>Subject</th>
-                <th>Unit Title</th>
-                <th>Length (mins)</th>
-                <th>Date</th>
-                <th>Time Left</th>
-              </tr>
-              <tr>
-                <td colspan="7" class="section">
-                  <h2 id="mathsHeader">Maths</h2>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="exams.html?subject=maths" id="maths" data-section-id="maths">Maths</a>
-                </td>
-                <td id="unitTitle-maths"></td>
-                <td id="duration-maths"></td>
-                <td id="date-maths"></td>
-                <td id="countdown-maths"></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="exams.html?subject=furtherMaths" id="furtherMaths" data-section-id="maths">Further Maths</a>
-                </td>
-                <td id="unitTitle-furtherMaths"></td>
-                <td id="duration-furtherMaths"></td>
-                <td id="date-furtherMaths"></td>
-                <td id="countdown-furtherMaths"></td>
-              </tr>
-              <tr>
-                <td colspan="7" class="section">
-                  <h2 id="englishHeader">English</h2>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="exams.html?subject=englishLiterature" id="englishLiterature" data-section-id="english">English Literature</a>
-                </td>
-                <td id="unitTitle-englishLiterature"></td>
-                <td id="duration-englishLiterature"></td>
-                <td id="date-englishLiterature"></td>
-                <td id="countdown-englishLiterature"></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="exams.html?subject=englishLanguage" id="englishLanguage" data-section-id="english">English Language</a>
-                </td>
-                <td id="unitTitle-englishLanguage"></td>
-                <td id="duration-englishLanguage"></td>
-                <td id="date-englishLanguage"></td>
-                <td id="countdown-englishLanguage"></td>
-              </tr>
-              <tr>
-                <td colspan="7" class="section">
-                  <h2 id="scienceHeader">Science</h2>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="exams.html?subject=biology" id="biology" data-section-id="science">Biology</a>
-                </td>
-                <td id="unitTitle-biology"></td>
-                <td id="duration-biology"></td>
-                <td id="date-biology"></td>
-                <td id="countdown-biology"></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="exams.html?subject=chemistry" id="chemistry" data-section-id="science">Chemistry</a>
-                </td>
-                <td id="unitTitle-chemistry"></td>
-                <td id="duration-chemistry"></td>
-                <td id="date-chemistry"></td>
-                <td id="countdown-chemistry"></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="exams.html?subject=physics" id="physics" data-section-id="science">Physics</a>
-                </td>
-                <td id="unitTitle-physics"></td>
-                <td id="duration-physics"></td>
-                <td id="date-physics"></td>
-                <td id="countdown-physics"></td>
-              </tr>
-              <tr>
-                <td colspan="7" class="section">
-                  <h2 id="languagesHeader">Languages</h2>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="exams.html?subject=german" id="german" data-section-id="languages">German</a>
-                </td>
-                <td id="unitTitle-german"></td>
-                <td id="duration-german"></td>
-                <td id="date-german"></td>
-                <td id="countdown-german"></td>
-              </tr>
-              <tr>
-                  <td>
-                    <a href="exams.html?subject=french" id="french" data-section-id="languages">French</a>
-                  </td>
-                  <td id="unitTitle-french"></td>
-                  <td id="duration-french"></td>
-                  <td id="date-french"></td>
-                  <td id="countdown-french"></td>
-                </tr>
-                <tr>
-                  <td colspan="7" class="section">
-                    <h2 id="humanitiesHeader">Humanities</h2>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=history" id="history" data-section-id="humanities">History</a>
-                  </td>
-                  <td id="unitTitle-history"></td>
-                  <td id="duration-history"></td>
-                  <td id="date-history"></td>
-                  <td id="countdown-history"></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=geography" id="geography" data-section-id="humanities">Geography</a>
-                  </td>
-                  <td id="unitTitle-geography"></td>
-                  <td id="duration-geography"></td>
-                  <td id="date-geography"></td>
-                  <td id="countdown-geography"></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=religiousStudies" id="religiousStudies" data-section-id="humanities">Religious Studies</a>
-                  </td>
-                  <td id="unitTitle-religiousStudies"></td>
-                  <td id="duration-religiousStudies"></td>
-                  <td id="date-religiousStudies"></td>
-                  <td id="countdown-religiousStudies"></td>
-                </tr>
-                <tr>
-                  <td colspan="7" class="section">
-                    <h2 id="dtHeader">Design & Technology</h2>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=designTechnology" id="designTech" data-section-id="dt">Design Technology</a>
-                  </td>
-                  <td id="unitTitle-designTechnology"></td>
-                  <td id="duration-designTechnology"></td>
-                  <td id="date-designTechnology"></td>
-                  <td id="countdown-designTechnology"></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=engineering" id="engineering" data-section-id="dt">Engineering</a>
-                  </td>
-                  <td id="unitTitle-engineering"></td>
-                  <td id="duration-engineering"></td>
-                  <td id="date-engineering"></td>
-                  <td id="countdown-engineering"></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=food" id="food" data-section-id="dt">Food</a>
-                  </td>
-                  <td id="unitTitle-food"></td>
-                  <td id="duration-food"></td>
-                  <td id="date-food"></td>
-                  <td id="countdown-food"></td>
-                </tr>
-                <tr>
-                  <td colspan="7" class="section">
-                    <h2 id="artsHeader">Arts</h2>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=drama" id="drama" data-section-id="arts">Drama</a>
-                  </td>
-                  <td id="unitTitle-drama"></td>
-                  <td id="duration-drama"></td>
-                  <td id="date-drama"></td>
-                  <td id="countdown-drama"></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=music" id="music" data-section-id="arts">Music</a>
-                  </td>
-                  <td id="unitTitle-music"></td>
-                  <td id="duration-music"></td>
-                  <td id="date-music"></td>
-                  <td id="countdown-music"></td>
-                </tr>
-                <tr>
-                  <td colspan="7" class="section">
-                      <h2 id="othersHeader">Others</h2>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=pe" id="pe" data-section-id="others">Physical Education</a>
-                  </td>
-                  <td id="unitTitle-pe"></td>
-                  <td id="duration-pe"></td>
-                  <td id="date-pe"></td>
-                  <td id="countdown-pe"></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=childDevelopment" id="childDev" data-section-id="others">Child Dev.</a>
-                  </td>
-                  <td id="unitTitle-childDevelopment"></td>
-                  <td id="duration-childDevelopment"></td>
-                  <td id="date-childDevelopment"></td>
-                  <td id="countdown-childDevelopment"></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=mediaStudies" id="mediaStudies" data-section-id="others">Media Studies</a>
-                  </td>
-                  <td id="unitTitle-mediaStudies"></td>
-                  <td id="duration-mediaStudies"></td>
-                  <td id="date-mediaStudies"></td>
-                  <td id="countdown-mediaStudies"></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=computerScience" id="computerScience" data-section-id="others">Computer Science</a>
-                  </td>
-                  <td id="unitTitle-computerScience"></td>
-                  <td id="duration-computerScience"></td>
-                  <td id="date-computerScience"></td>
-                  <td id="countdown-computerScience"></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="exams.html?subject=business" id="business" data-section-id="others">Business</a>
-                  </td>
-                  <td id="unitTitle-business"></td>
-                  <td id="duration-business"></td>
-                  <td id="date-business"></td>
-                  <td id="countdown-business"></td>
-                </tr>
-          </table>
+        <table id="subjectsTable">
+          <tr>
+            <th>Subject</th>
+            <th>Unit Title</th>
+            <th>Length (mins)</th>
+            <th>Date</th>
+            <th>Time Left</th>
+          </tr>
+          <tr>
+            <td colspan="7" class="section">
+              <h2 id="mathsHeader">Maths</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=maths" id="maths" data-section-id="maths">Maths</a>
+            </td>
+            <td id="unitTitle-maths"></td>
+            <td id="duration-maths"></td>
+            <td id="date-maths"></td>
+            <td id="countdown-maths"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=furtherMaths" id="furtherMaths" data-section-id="maths">Further Maths</a>
+            </td>
+            <td id="unitTitle-furtherMaths"></td>
+            <td id="duration-furtherMaths"></td>
+            <td id="date-furtherMaths"></td>
+            <td id="countdown-furtherMaths"></td>
+          </tr>
+          <tr>
+            <td colspan="7" class="section">
+              <h2 id="englishHeader">English</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=englishLiterature" id="englishLiterature" data-section-id="english">English Literature</a>
+            </td>
+            <td id="unitTitle-englishLiterature"></td>
+            <td id="duration-englishLiterature"></td>
+            <td id="date-englishLiterature"></td>
+            <td id="countdown-englishLiterature"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=englishLanguage" id="englishLanguage" data-section-id="english">English Language</a>
+            </td>
+            <td id="unitTitle-englishLanguage"></td>
+            <td id="duration-englishLanguage"></td>
+            <td id="date-englishLanguage"></td>
+            <td id="countdown-englishLanguage"></td>
+          </tr>
+          <tr>
+            <td colspan="7" class="section">
+              <h2 id="scienceHeader">Science</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=biology" id="biology" data-section-id="science">Biology</a>
+            </td>
+            <td id="unitTitle-biology"></td>
+            <td id="duration-biology"></td>
+            <td id="date-biology"></td>
+            <td id="countdown-biology"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=chemistry" id="chemistry" data-section-id="science">Chemistry</a>
+            </td>
+            <td id="unitTitle-chemistry"></td>
+            <td id="duration-chemistry"></td>
+            <td id="date-chemistry"></td>
+            <td id="countdown-chemistry"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=physics" id="physics" data-section-id="science">Physics</a>
+            </td>
+            <td id="unitTitle-physics"></td>
+            <td id="duration-physics"></td>
+            <td id="date-physics"></td>
+            <td id="countdown-physics"></td>
+          </tr>
+          <tr>
+            <td colspan="7" class="section">
+              <h2 id="languagesHeader">Languages</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=german" id="german" data-section-id="languages">German</a>
+            </td>
+            <td id="unitTitle-german"></td>
+            <td id="duration-german"></td>
+            <td id="date-german"></td>
+            <td id="countdown-german"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=french" id="french" data-section-id="languages">French</a>
+            </td>
+            <td id="unitTitle-french"></td>
+            <td id="duration-french"></td>
+            <td id="date-french"></td>
+            <td id="countdown-french"></td>
+          </tr>
+          <tr>
+            <td colspan="7" class="section">
+              <h2 id="humanitiesHeader">Humanities</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=history" id="history" data-section-id="humanities">History</a>
+            </td>
+            <td id="unitTitle-history"></td>
+            <td id="duration-history"></td>
+            <td id="date-history"></td>
+            <td id="countdown-history"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=geography" id="geography" data-section-id="humanities">Geography</a>
+            </td>
+            <td id="unitTitle-geography"></td>
+            <td id="duration-geography"></td>
+            <td id="date-geography"></td>
+            <td id="countdown-geography"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=religiousStudies" id="religiousStudies" data-section-id="humanities">Religious Studies</a>
+            </td>
+            <td id="unitTitle-religiousStudies"></td>
+            <td id="duration-religiousStudies"></td>
+            <td id="date-religiousStudies"></td>
+            <td id="countdown-religiousStudies"></td>
+          </tr>
+          <tr>
+            <td colspan="7" class="section">
+              <h2 id="dtHeader">Design & Technology</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=designTechnology" id="designTech" data-section-id="dt">Design Technology</a>
+            </td>
+            <td id="unitTitle-designTechnology"></td>
+            <td id="duration-designTechnology"></td>
+            <td id="date-designTechnology"></td>
+            <td id="countdown-designTechnology"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=engineering" id="engineering" data-section-id="dt">Engineering</a>
+            </td>
+            <td id="unitTitle-engineering"></td>
+            <td id="duration-engineering"></td>
+            <td id="date-engineering"></td>
+            <td id="countdown-engineering"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=food" id="food" data-section-id="dt">Food</a>
+            </td>
+            <td id="unitTitle-food"></td>
+            <td id="duration-food"></td>
+            <td id="date-food"></td>
+            <td id="countdown-food"></td>
+          </tr>
+          <tr>
+            <td colspan="7" class="section">
+              <h2 id="artsHeader">Arts</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=drama" id="drama" data-section-id="arts">Drama</a>
+            </td>
+            <td id="unitTitle-drama"></td>
+            <td id="duration-drama"></td>
+            <td id="date-drama"></td>
+            <td id="countdown-drama"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=music" id="music" data-section-id="arts">Music</a>
+            </td>
+            <td id="unitTitle-music"></td>
+            <td id="duration-music"></td>
+            <td id="date-music"></td>
+            <td id="countdown-music"></td>
+          </tr>
+          <tr>
+            <td colspan="7" class="section">
+                <h2 id="othersHeader">Others</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=pe" id="pe" data-section-id="others">Physical Education</a>
+            </td>
+            <td id="unitTitle-pe"></td>
+            <td id="duration-pe"></td>
+            <td id="date-pe"></td>
+            <td id="countdown-pe"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=childDevelopment" id="childDev" data-section-id="others">Child Dev.</a>
+            </td>
+            <td id="unitTitle-childDevelopment"></td>
+            <td id="duration-childDevelopment"></td>
+            <td id="date-childDevelopment"></td>
+            <td id="countdown-childDevelopment"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=mediaStudies" id="mediaStudies" data-section-id="others">Media Studies</a>
+            </td>
+            <td id="unitTitle-mediaStudies"></td>
+            <td id="duration-mediaStudies"></td>
+            <td id="date-mediaStudies"></td>
+            <td id="countdown-mediaStudies"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=computerScience" id="computerScience" data-section-id="others">Computer Science</a>
+            </td>
+            <td id="unitTitle-computerScience"></td>
+            <td id="duration-computerScience"></td>
+            <td id="date-computerScience"></td>
+            <td id="countdown-computerScience"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="exams.html?subject=business" id="business" data-section-id="others">Business</a>
+            </td>
+            <td id="unitTitle-business"></td>
+            <td id="duration-business"></td>
+            <td id="date-business"></td>
+            <td id="countdown-business"></td>
+          </tr>
+        </table>
+        <br>
       </div>
-      
+    </div>
+    <p class="small">Please Note: MFL speaking tests and Art and Design exams are not included, as the timings of these are decided by individual centres.</p>
+    <footer>
+      <p class="small">While I strive for accuracy, information may not be complete or up to date. Use at your own risk.</p>
+      <p>&copy; Ruben Parnell <script>document.write(new Date().getFullYear())</script></p>
+    </footer>
     <script src="menu.js"></script>
     <script src="countdown.js" type="module"></script>
-  </div>
-</body>
+  </body>
 </html>

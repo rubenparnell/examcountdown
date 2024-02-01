@@ -1,27 +1,27 @@
+<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <link rel="stylesheet" href="styles.css">
     <title>Exams</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
+  </head>
+  <body>
 
-<h1>Exams for {{subjectName}}</h1>
+    <h1>Exams for {{subjectName}}</h1>
 
-<button id="back-button" href="index.html">◄</button>
-<div id="exam-tables" class="centre"></div>
+    <button id="back-button" href="index.html">◄</button>
+    <div id="exam-tables" class="centre"></div>
 
-<script src="specificCountdown.js" type="module" ></script>
-<script>
-// Select the back button
-const backButton = document.getElementById("back-button");
+    <script src="specificCountdown.js" type="module" ></script>
+    <script>
+      // Select the back button
+      const backButton = document.getElementById("back-button");
 
-// Add a click event listener to the button
-backButton.addEventListener("click", () => {
-  // Redirect to the desired page using window.location.href
-  window.location.href = "index.html";
-});
-</script>
-
-</body>
+      // Add a click event listener to the button
+      backButton.addEventListener("click", () => {
+        // Redirect to the desired page using window.location.href
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
 </html>

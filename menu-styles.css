@@ -5,19 +5,15 @@
 #side-menu {
     position: fixed;
     top: 50px;
-    left: -250px; /* Set initial position off-screen */
-    width: 225px;
-    height: 20px;
+    left: 20px;
+    width: 40px; 
+    height: 40px;
     background-color: #150552;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
     transition: 0.3s;
     overflow-x: hidden;
     border-radius: 20px; /* Make it circular */
-}
-
-#main {
-    transition: 0.3s;
 }
 
 .menu-group{
@@ -54,8 +50,8 @@
     position: fixed;
     top: 50px;
     left: 20px;
-    width: 40px; /* Adjust as needed */
-    height: 40px; /* Adjust as needed */
+    width: 40px;
+    height: 40px; 
     background-color: #150552;
     border-radius: 50%; /* Make it circular */
     color: white; /* Adjust text color if needed */

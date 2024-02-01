@@ -1,17 +1,33 @@
 body {
     font-family: Roboto, sans-serif;
     text-align: center;
+    color: #150552;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
+#main {
+    padding: 5px;
+    margin: 5px;
+    padding-top: 0px;
+}
 p {
     font-size: 18px;
 }
 
 #subjects-list a {
     display: block;
-    text-decoration: none;
-    color: #333;
     font-size: 15px;
+}
+
+a:link, a:visited {
+    color: #150552;
+}
+
+a:hover {
+    color: rgb(36, 26, 185);
 }
 
 #countdown {
@@ -50,6 +66,10 @@ th{
     font-size: 15px;
 }
 
+.small{
+    font-size: 15px;
+}
+
 #subjectsTable, #exam-tables {
     margin: auto;
 }
@@ -74,6 +94,13 @@ th{
     height: 40px;
     align-items: center;
     justify-content: center;
-    display: flex
+    display: flex;
   }
-  
+
+footer {
+    background-color: #150552; 
+    color: white;
+    padding: 15px 10px;
+    width: 100%-20px;
+    margin: 50px 0px 0px 0px;
+}
