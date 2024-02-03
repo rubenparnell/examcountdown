@@ -163,53 +163,87 @@ for (const checkboxId in savedStates) {
     }
 }
 }
-  
+
 function updateSubjectVisibility() {
     const savedStates = JSON.parse(localStorage.getItem('checkboxStates')) || {};
-
-    // Create a map to store the visibility status of each section header
     const sectionVisibilityMap = {};
 
-    // Apply saved checkbox states to hide or show subjects
+    // Iterate over checkboxes to update subject visibility and count for each section
     for (const checkboxId in savedStates) {
         const subjectId = checkboxId.replace('Checkbox', '');
         const subject = document.getElementById(subjectId);
 
         if (subject) {
-            // Find the closest parent row element
             const row = subject.closest('tr');
+            const sectionId = subject.getAttribute('data-section-id');
 
+            // Initialize count and totalSubjects for the section
+            sectionVisibilityMap[sectionId] = sectionVisibilityMap[sectionId] || {
+                count: 0,
+                totalSubjects: 0,
+                header: document.getElementById(`${sectionId}Header`),
+            };
+
+            // Increment count based on the initial state of the checkbox
             if (savedStates[checkboxId]) {
-                // Show the entire row when the checkbox is checked
-                row.style.display = 'table-row';
-            } else {
-                // Hide the entire row when the checkbox is unchecked
-                row.style.display = 'none';
+                sectionVisibilityMap[sectionId].count++;
             }
 
-            // Track the visibility status of each section header
-            const sectionId = subject.getAttribute('data-section-id');
-            if (sectionId) {
-                sectionVisibilityMap[sectionId] = sectionVisibilityMap[sectionId] || {
-                    count: 0,
-                    header: document.getElementById(`${sectionId}Header`),
-                };
+            // Increment the total number of subjects in the section
+            sectionVisibilityMap[sectionId].totalSubjects++;
 
-                // Count visible subjects within the section
-                if (savedStates[checkboxId]) {
-                    sectionVisibilityMap[sectionId].count++;
+            // Apply saved checkbox states to hide or show subjects
+            if (savedStates[checkboxId]) {
+                row.style.display = 'table-row';
+            } else {
+                row.style.display = 'none';
+            }
+        }
+    }
+
+    // Handle checkboxes without a saved state
+    const checkboxes = document.querySelectorAll('#side-menu input[type="checkbox"]');
+    checkboxes.forEach(function (checkbox) {
+        const checkboxId = checkbox.id;
+        const subjectId = checkboxId.replace('Checkbox', '');
+        const subject = document.getElementById(subjectId);
+        const sectionId = subject.getAttribute('data-section-id');
+
+        if (!(checkboxId in savedStates)) {
+            // Default to 'true' if no saved state
+            savedStates[checkboxId] = true;
+
+            // Update sectionVisibilityMap for checkboxes without a saved state
+            sectionVisibilityMap[sectionId] = sectionVisibilityMap[sectionId] || {
+                count: 1,
+                totalSubjects: 0,
+                header: document.getElementById(`${sectionId}Header`),
+            };
+            console.log("here",sectionVisibilityMap[sectionId])
+
+            // Increment totalSubjects for the section
+            sectionVisibilityMap[sectionId].totalSubjects++;
+        }
+    });
+
+    console.log("SVM", sectionVisibilityMap);
+    
+    // Delay visibility update until all elements are processed
+    setTimeout(() => {
+        // Hide or show the section headers based on the visibility status
+        for (const sectionId in sectionVisibilityMap) {
+            const { count, totalSubjects, header } = sectionVisibilityMap[sectionId];
+            console.log(sectionVisibilityMap[sectionId]);
+            if (header) {
+                if (count === 0) {
+                    header.closest('tr').style.display = 'none';
+                } else {
+                    header.closest('tr').style.display = 'table-row';
                 }
             }
         }
-    }
+    }, 0);
 
-    // Hide or show the section headers based on the visibility status
-    for (const sectionId in sectionVisibilityMap) {
-        const { count, header } = sectionVisibilityMap[sectionId];
-        if (header) {
-            // Check if there are no visible subjects in the section
-            const noVisibleSubjects = count === 0;
-            header.closest('tr').style.display = noVisibleSubjects ? 'none' : 'table-row';
-        }
-    }
+    // Save updated states to localStorage
+    localStorage.setItem('checkboxStates', JSON.stringify(savedStates));
 }
