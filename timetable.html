@@ -3,11 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exams Table</title>
+  <title>Exams Timetable</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="menu-styles.css">
 </head>
 <body>
+  <div id="open-menu-btn">&#9776;</div>
+
+    <div id="side-menu">
+      <h2>Subjects</h2>
+      <a>Update to show subjects you are studying:</a>
+      <!-- Maths Group -->
+        <h3 class="menu-group">Maths</h3>
+        <label><input type="checkbox" id="mathsCheckbox" checked> Maths</label>
+        <label><input type="checkbox" id="furtherMathsCheckbox" checked> Further Maths</label>
+    
+      <!-- English Group -->
+        <h3 class="menu-group">English</h3>
+        <label><input type="checkbox" id="englishLiteratureCheckbox" checked> English Literature</label>
+        <label><input type="checkbox" id="englishLanguageCheckbox" checked> English Language</label>
+
+      <!-- Science Group -->
+        <h3 class="menu-group">Sciences</h3>
+        <label><input type="checkbox" id="biologyCheckbox" checked> Seperate Biology</label>
+        <label><input type="checkbox" id="chemistryCheckbox" checked> Seperate Chemistry</label>
+        <label><input type="checkbox" id="physicsCheckbox" checked> Seperate Physics</label>
+        <label><input type="checkbox" id="combinedBiologyCheckbox" checked> Combined Biology</label>
+        <label><input type="checkbox" id="combinedChemistryCheckbox" checked> Combined Chemistry</label>
+        <label><input type="checkbox" id="combinedPhysicsCheckbox" checked> Combined Physics</label>
+
+      <!-- Languages Group -->
+        <h3 class="menu-group">Languages</h3>
+        <label><input type="checkbox" id="germanCheckbox" checked> German</label>
+        <label><input type="checkbox" id="frenchCheckbox" checked> French</label>
+
+      <!-- Humanities Group -->
+        <h3 class="menu-group">Humanities</h3>
+        <label><input type="checkbox" id="historyCheckbox" checked> History</label>
+        <label><input type="checkbox" id="geographyCheckbox" checked> Geography</label>
+        <label><input type="checkbox" id="religiousStudiesCheckbox" checked> Religious Studies</label>
+
+      <!-- Design & Technology Group -->
+        <h3 class="menu-group">Design & Technology</h3>
+        <label><input type="checkbox" id="designTechCheckbox" checked> Design Technology</label>
+        <label><input type="checkbox" id="engineeringCheckbox" checked> Engineering</label>
+        <label><input type="checkbox" id="foodCheckbox" checked> Food</label>
+
+      <!-- Arts Group -->
+        <h3 class="menu-group">Arts</h3>
+        <label><input type="checkbox" id="dramaCheckbox" checked> Drama</label>
+        <label><input type="checkbox" id="musicCheckbox" checked> Music</label>
+
+      <!-- Others Group -->
+        <h3 class="menu-group">Others</h3>
+        <label><input type="checkbox" id="peCheckbox" checked> Physical Education</label>
+        <label><input type="checkbox" id="childDevCheckbox" checked> Child Development</label>
+        <label><input type="checkbox" id="mediaStudiesCheckbox" checked> Media Studies</label>
+        <label><input type="checkbox" id="computerScienceCheckbox" checked> Computer Science</label>
+        <label><input type="checkbox" id="businessCheckbox" checked> Business</label>
+      <br><br>
+    </div>
+  
   <table border="1">
     <thead>
       <tr>
@@ -40,5 +96,6 @@
       document.getElementById('examsTableBody').appendChild(row);
     });
   </script>
+  <script src="menu.js"></script>
 </body>
 </html>
