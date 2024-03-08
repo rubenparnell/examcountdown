@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exams Table</title>
+</head>
+<body>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Board</th>
+        <th>Subject</th>
+        <th>Unit Code</th>
+        <th>Unit Title</th>
+        <th>Duration (mins)</th>
+      </tr>
+    </thead>
+    <tbody id="examsTableBody">
+    </tbody>
+  </table>
+
+  <script src="examsArray.js"></script>
+  <script>
+    exams.forEach(exam => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${exam.date}</td>
+        <td>${exam.time}</td>
+        <td>${exam.board}</td>
+        <td>${exam.subject}</td>
+        <td>${exam.unitCode}</td>
+        <td>${exam.unitTitle}</td>
+        <td>${exam.durationMins}</td>
+      `;
+      document.getElementById('examsTableBody').appendChild(row);
+    });
+  </script>
+</body>
+</html>
