@@ -18,7 +18,7 @@ function createSubjectTable(subject) {
   headerRow.appendChild(document.createElement("th")).textContent = "Board";
   headerRow.appendChild(document.createElement("th")).textContent = "Unit Code";
   headerRow.appendChild(document.createElement("th")).textContent = "Unit Title";
-  headerRow.appendChild(document.createElement("th")).textContent = "Duration";
+  headerRow.appendChild(document.createElement("th")).textContent = "Length (mins)";
   headerRow.appendChild(document.createElement("th")).textContent = "Countdown";
 
   // Filter exams for the given subject and create table rows
@@ -31,7 +31,7 @@ function createSubjectTable(subject) {
           row.insertCell().textContent = exam.board;
           row.insertCell().textContent = exam.unitCode;
           row.insertCell().textContent = exam.unitTitle;
-          row.insertCell().textContent = `${exam.durationMins} minutes`;
+          row.insertCell().textContent = exam.durationMins;
 
           // Create a cell for time until exam
           const timeUntilCell = row.insertCell();
