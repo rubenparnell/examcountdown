@@ -42,12 +42,19 @@ table, th, td, tr {
     border-spacing: 10px;
     text-align: center;
     padding: 10px 15px;
+    overflow-x: auto;
   }
 
-@media only screen and (max-width: 600px) {
+/* PHONE ONLY: */
+@media only screen and (max-width: 800px) {
     table, th, td, tr {
         padding: 5px;
-      }    
+      }
+}
+
+#exam-table, #timetable-table {
+    padding: 5px;
+    overflow-x: auto;
 }
 
 [id*="unitTitle"] {
@@ -113,13 +120,12 @@ footer {
     cursor: pointer;
     z-index: 2;
     position: fixed;
+    top: 30px;
   }
-
 
 #open-menu-btn {
     border-radius: 50%; /* Make it circular */
     line-height: 40px; /* Vertically center the text */
-    top: 50px;
     left: 20px;
     width: 40px;
     height: 40px;
@@ -127,11 +133,9 @@ footer {
 
 /* Timetable Button */
 #timetable-btn {
-    top: 50px;
     right: 20px;
-    /* width: 200px; */
     height: 50px;
-    border-radius: 10px; /* Adjust the border-radius for rounded corners */
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,3 +143,13 @@ footer {
     padding-right: 10px;
     text-decoration: underline;
   }
+
+/* PHONE ONLY: */
+@media only screen and (max-width: 600px) {
+    #open-menu-btn, #timetable-btn {
+        top: 100px;
+      }
+    .spacing{
+        padding: 10px;
+    }
+}

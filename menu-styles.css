@@ -4,7 +4,7 @@
 
 #side-menu {
     position: fixed;
-    top: 50px;
+    top: 30px;
     left: 20px;
     width: 40px; 
     height: 40px;
@@ -14,6 +14,17 @@
     transition: 0.3s;
     overflow-x: hidden;
     border-radius: 20px; /* Make it circular */
+}
+
+/* PHONE ONLY: */
+@media only screen and (max-width: 800px) {
+    #side-menu {
+        top: 100px;
+      }
+}
+
+.no-transition {
+    transition: none !important;
 }
 
 .menu-group{

@@ -7,7 +7,7 @@ document.getElementById('open-menu-btn').addEventListener('click', function() {
     // Toggle the left position and margin of the main content
     if (sideMenu.classList.contains('open')) {
         sideMenu.style.left = '20px';
-        sideMenu.style.height = "90vh";
+        sideMenu.style.height = "80vh";
         sideMenu.style.width = '225px';
     } else {
         sideMenu.style.height = "39px";

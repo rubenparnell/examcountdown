@@ -1,6 +1,6 @@
 import { exams } from './examsArray.js';
 import { timeUntilExam } from './shared.js';
-
+import { convertCamelCaseToWords } from './shared.js';
 
 // MENU:
 document.getElementById('open-menu-btn').addEventListener('click', function() {
@@ -188,10 +188,6 @@ function updateSubjectVisibility() {
     });
 }
 
-function convertCamelCaseToWords(inputString) {
-    return inputString.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([A-Z])([A-Z][a-z])/g, '$1 $2').replace(/^\w/, c => c.toUpperCase());
-}
-
 function updateTable() {
     let savedStates = loadSavedCheckboxStates();
     exams.forEach(exam => {
@@ -205,10 +201,10 @@ function updateTable() {
             row.innerHTML = `
                 <td>${exam.date}</td>
                 <td>${exam.time}</td>
-                <td>${exam.board}</td>
                 <td>${convertedSubject}</td>
                 <td>${exam.unitCode}</td>
                 <td>${exam.unitTitle}</td>
+                <td>${exam.board}</td>
                 <td>${exam.durationMins}</td>
                 <td>${countdown}</td>
             `;
@@ -226,4 +222,4 @@ setInterval(() => {
     document.getElementById('examsTableBody').innerHTML = '';
     // Update the table with new data
     updateTable();
-}, 10);
+}, 1000);

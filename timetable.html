@@ -10,81 +10,85 @@
 <body>
   <h1>All Subjects Timetable:</h1>
   <br>
-  <div id="open-menu-btn">&#9776;</div>
-    <div id="side-menu">
-      <h2>Subjects</h2>
-      <a>Update to show subjects you are studying:</a>
-      <!-- Maths Group -->
-        <h3 class="menu-group">Maths</h3>
-        <label><input type="checkbox" id="mathsCheckbox" checked> Maths</label>
-        <label><input type="checkbox" id="furtherMathsCheckbox" checked> Further Maths</label>
-    
-      <!-- English Group -->
-        <h3 class="menu-group">English</h3>
-        <label><input type="checkbox" id="englishLiteratureCheckbox" checked> English Literature</label>
-        <label><input type="checkbox" id="englishLanguageCheckbox" checked> English Language</label>
+  <br>
+  <div id="open-menu-btn" style="top: 60px">&#9776;</div>
 
-      <!-- Science Group -->
-        <h3 class="menu-group">Sciences</h3>
-        <label><input type="checkbox" id="biologyCheckbox" checked> Seperate Biology</label>
-        <label><input type="checkbox" id="chemistryCheckbox" checked> Seperate Chemistry</label>
-        <label><input type="checkbox" id="physicsCheckbox" checked> Seperate Physics</label>
-        <label><input type="checkbox" id="combinedBiologyCheckbox" checked> Combined Biology</label>
-        <label><input type="checkbox" id="combinedChemistryCheckbox" checked> Combined Chemistry</label>
-        <label><input type="checkbox" id="combinedPhysicsCheckbox" checked> Combined Physics</label>
+  <a href="index.html"><div id="timetable-btn" style="top: 60px">Home</div></a>
 
-      <!-- Languages Group -->
-        <h3 class="menu-group">Languages</h3>
-        <label><input type="checkbox" id="germanCheckbox" checked> German</label>
-        <label><input type="checkbox" id="frenchCheckbox" checked> French</label>
-
-      <!-- Humanities Group -->
-        <h3 class="menu-group">Humanities</h3>
-        <label><input type="checkbox" id="historyCheckbox" checked> History</label>
-        <label><input type="checkbox" id="geographyCheckbox" checked> Geography</label>
-        <label><input type="checkbox" id="religiousStudiesCheckbox" checked> Religious Studies</label>
-
-      <!-- Design & Technology Group -->
-        <h3 class="menu-group">Design & Technology</h3>
-        <label><input type="checkbox" id="designTechCheckbox" checked> Design Technology</label>
-        <label><input type="checkbox" id="engineeringCheckbox" checked> Engineering</label>
-        <label><input type="checkbox" id="foodCheckbox" checked> Food</label>
-
-      <!-- Arts Group -->
-        <h3 class="menu-group">Arts</h3>
-        <label><input type="checkbox" id="dramaCheckbox" checked> Drama</label>
-        <label><input type="checkbox" id="musicCheckbox" checked> Music</label>
-
-      <!-- Others Group -->
-        <h3 class="menu-group">Others</h3>
-        <label><input type="checkbox" id="peCheckbox" checked> Physical Education</label>
-        <label><input type="checkbox" id="childDevCheckbox" checked> Child Development</label>
-        <label><input type="checkbox" id="mediaStudiesCheckbox" checked> Media Studies</label>
-        <label><input type="checkbox" id="computerScienceCheckbox" checked> Computer Science</label>
-        <label><input type="checkbox" id="businessCheckbox" checked> Business</label>
-      <br><br>
-    </div>
+  <div id="side-menu" style="top: 60px">
+    <h2>Subjects</h2>
+    <a>Update to show subjects you are studying:</a>
+    <!-- Maths Group -->
+      <h3 class="menu-group">Maths</h3>
+      <label><input type="checkbox" id="mathsCheckbox" checked> Maths</label>
+      <label><input type="checkbox" id="furtherMathsCheckbox" checked> Further Maths</label>
   
-  <table class="centre">
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Board</th>
-        <th>Subject</th>
-        <th>Unit Code</th>
-        <th>Unit Title</th>
-        <th>Duration (mins)</th>
-        <th>Countdown</th>
-      </tr>
-    </thead>
-    <tbody id="examsTableBody">
-    </tbody>
-  </table>
+    <!-- English Group -->
+      <h3 class="menu-group">English</h3>
+      <label><input type="checkbox" id="englishLiteratureCheckbox" checked> English Literature</label>
+      <label><input type="checkbox" id="englishLanguageCheckbox" checked> English Language</label>
 
-  <!-- <script src="examsArrayTest.js"></script> -->
+    <!-- Science Group -->
+      <h3 class="menu-group">Sciences</h3>
+      <label><input type="checkbox" id="biologyCheckbox" checked> Seperate Biology</label>
+      <label><input type="checkbox" id="chemistryCheckbox" checked> Seperate Chemistry</label>
+      <label><input type="checkbox" id="physicsCheckbox" checked> Seperate Physics</label>
+      <label><input type="checkbox" id="combinedBiologyCheckbox" checked> Combined Biology</label>
+      <label><input type="checkbox" id="combinedChemistryCheckbox" checked> Combined Chemistry</label>
+      <label><input type="checkbox" id="combinedPhysicsCheckbox" checked> Combined Physics</label>
+
+    <!-- Languages Group -->
+      <h3 class="menu-group">Languages</h3>
+      <label><input type="checkbox" id="germanCheckbox" checked> German</label>
+      <label><input type="checkbox" id="frenchCheckbox" checked> French</label>
+
+    <!-- Humanities Group -->
+      <h3 class="menu-group">Humanities</h3>
+      <label><input type="checkbox" id="historyCheckbox" checked> History</label>
+      <label><input type="checkbox" id="geographyCheckbox" checked> Geography</label>
+      <label><input type="checkbox" id="religiousStudiesCheckbox" checked> Religious Studies</label>
+
+    <!-- Design & Technology Group -->
+      <h3 class="menu-group">Design & Technology</h3>
+      <label><input type="checkbox" id="designTechCheckbox" checked> Design Technology</label>
+      <label><input type="checkbox" id="engineeringCheckbox" checked> Engineering</label>
+      <label><input type="checkbox" id="foodCheckbox" checked> Food</label>
+
+    <!-- Arts Group -->
+      <h3 class="menu-group">Arts</h3>
+      <label><input type="checkbox" id="dramaCheckbox" checked> Drama</label>
+      <label><input type="checkbox" id="musicCheckbox" checked> Music</label>
+
+    <!-- Others Group -->
+      <h3 class="menu-group">Others</h3>
+      <label><input type="checkbox" id="peCheckbox" checked> Physical Education</label>
+      <label><input type="checkbox" id="childDevCheckbox" checked> Child Development</label>
+      <label><input type="checkbox" id="mediaStudiesCheckbox" checked> Media Studies</label>
+      <label><input type="checkbox" id="computerScienceCheckbox" checked> Computer Science</label>
+      <label><input type="checkbox" id="businessCheckbox" checked> Business</label>
+    <br><br>
+  </div>
+  <div id="timetable-table">
+    <table class="centre">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Subject</th>
+          <th>Unit Code</th>
+          <th>Unit Title</th>
+          <th>Board</th>
+          <th>Duration (mins)</th>
+          <th>Countdown</th>
+        </tr>
+      </thead>
+      <tbody id="examsTableBody">
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <br>
+  <br>
   <script src="timetable.js" type="module"></script>
-  <!-- <script src="countdown.js" type="module"></script> -->
-  <script src="menuTimetable.js" type="module"></script>
 </body>
 </html>

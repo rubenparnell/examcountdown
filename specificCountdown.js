@@ -1,5 +1,6 @@
 import { exams } from './examsArray.js';
 import { timeUntilExam } from './shared.js';
+import { convertCamelCaseToWords } from './shared.js';
 
 function getSubjectFromUrl() {
     const urlSearchParams = new URLSearchParams(window.location.search);
@@ -18,7 +19,7 @@ function createSubjectTable(subject) {
   headerRow.appendChild(document.createElement("th")).textContent = "Unit Code";
   headerRow.appendChild(document.createElement("th")).textContent = "Unit Title";
   headerRow.appendChild(document.createElement("th")).textContent = "Duration";
-  headerRow.appendChild(document.createElement("th")).textContent = "Time Until";
+  headerRow.appendChild(document.createElement("th")).textContent = "Countdown";
 
   // Filter exams for the given subject and create table rows
   exams
@@ -53,11 +54,6 @@ function updateCellTimeUntil(cell, exam) {
 const subject = getSubjectFromUrl();
 
 createSubjectTable(subject);
-
-// Nice looking subject name:
-function convertCamelCaseToWords(inputString) {
-  return inputString.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([A-Z])([A-Z][a-z])/g, '$1 $2').replace(/^\w/, c => c.toUpperCase());
-}
 
 let convertedSubject = convertCamelCaseToWords(subject);
 

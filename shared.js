@@ -18,3 +18,11 @@ export function timeUntilExam(exam) {
   
     return `${days}d, ${hours}h, ${minutes}m, ${seconds}s`;
 }
+
+export function convertCamelCaseToWords(inputString) {
+  if (inputString == "pe"){
+      return "PE"
+  } else{
+      return inputString.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([A-Z])([A-Z][a-z])/g, '$1 $2').replace(/^\w/, c => c.toUpperCase());
+  }
+}
