@@ -1,46 +1,14 @@
 import { exams } from './examsArray.js';
+import { timeUntilExam } from './shared.js';
 
 function getSubjectFromUrl() {
     const urlSearchParams = new URLSearchParams(window.location.search);
     return urlSearchParams.get("subject");
   }
-  
-function timeUntilExam(exam) {
-    const examDate = exam.date;
-    const examTime = exam.time === "am" ? "09:00" : "13:30"; // Set exam times as specified
-    const examDateTime = new Date(`${examDate}T${examTime}`);
-  
-    const now = new Date();
-  
-    // Ensure exam time is in the future
-    if (examDateTime <= now) {
-      return "Exam has already started or finished";
-    }
-  
-    const differenceInMilliseconds = examDateTime - now;
-    const days = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((differenceInMilliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((differenceInMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((differenceInMilliseconds % (1000 * 60)) / (1000));
-  
-    return `${days} Days, ${hours} Hrs, ${minutes} Mins, ${seconds} Secs`;
-}
-
-function updateTable() {
-  const subject = getSubjectFromUrl();
-  const table = document.getElementById("exam-tables");
-
-  // Remove existing table if any
-  while (table.firstChild) {
-      table.removeChild(table.firstChild);
-  }
-
-  createSubjectTable(subject);
-}
 
 function createSubjectTable(subject) {
   const table = document.createElement("table");
-  table.classList.add("exam-table");
+  table.classList.add("centre");
 
   // Create table headers
   const headerRow = table.insertRow();
@@ -74,7 +42,7 @@ function createSubjectTable(subject) {
           }, 1000);
       });
 
-  document.getElementById("exam-tables").appendChild(table);
+  document.getElementById("exam-table").appendChild(table);
 }
 
 function updateCellTimeUntil(cell, exam) {

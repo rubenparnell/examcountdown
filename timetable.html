@@ -66,7 +66,7 @@
       <br><br>
     </div>
   
-  <table border="1", id="exam-tables">
+  <table class="centre">
     <thead>
       <tr>
         <th>Date</th>
@@ -76,28 +76,16 @@
         <th>Unit Code</th>
         <th>Unit Title</th>
         <th>Duration (mins)</th>
+        <th>Countdown</th>
       </tr>
     </thead>
     <tbody id="examsTableBody">
     </tbody>
   </table>
 
-  <script src="examsArrayTest.js"></script>
-  <script>
-    exams.forEach(exam => {
-      const row = document.createElement('tr');
-      row.innerHTML = `
-        <td>${exam.date}</td>
-        <td>${exam.time}</td>
-        <td>${exam.board}</td>
-        <td>${exam.subject}</td>
-        <td>${exam.unitCode}</td>
-        <td>${exam.unitTitle}</td>
-        <td>${exam.durationMins}</td>
-      `;
-      document.getElementById('examsTableBody').appendChild(row);
-    });
-  </script>
-  <script src="menu.js"></script>
+  <!-- <script src="examsArrayTest.js"></script> -->
+  <script src="timetable.js" type="module"></script>
+  <!-- <script src="countdown.js" type="module"></script> -->
+  <script src="menuTimetable.js" type="module"></script>
 </body>
 </html>
