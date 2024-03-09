@@ -199,6 +199,7 @@ function updateTable() {
             row.setAttribute('id', subject);
 
             row.innerHTML = `
+                <td>${countdown}</td>
                 <td>${exam.date}</td>
                 <td>${exam.time}</td>
                 <td>${convertedSubject}</td>
@@ -206,7 +207,6 @@ function updateTable() {
                 <td>${exam.unitTitle}</td>
                 <td>${exam.board}</td>
                 <td>${exam.durationMins}</td>
-                <td>${countdown}</td>
             `;
             document.getElementById('examsTableBody').appendChild(row);
         }
