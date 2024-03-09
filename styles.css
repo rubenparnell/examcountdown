@@ -104,3 +104,38 @@ footer {
     width: 100%-20px;
     margin: 50px 0px 0px 0px;
 }
+
+/* Menu Button */
+#open-menu-btn, #timetable-btn {
+    background-color: #150552;
+    color: white; /* Adjust text color if needed */
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+    position: fixed;
+  }
+
+
+#open-menu-btn {
+    border-radius: 50%; /* Make it circular */
+    line-height: 40px; /* Vertically center the text */
+    top: 50px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+/* Timetable Button */
+#timetable-btn {
+    top: 50px;
+    right: 20px;
+    /* width: 200px; */
+    height: 50px;
+    border-radius: 10px; /* Adjust the border-radius for rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: underline;
+  }

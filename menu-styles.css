@@ -45,18 +45,3 @@
 #side-menu label:hover {
     color: #f1f1f1;
 }
-
-#open-menu-btn {
-    position: fixed;
-    top: 50px;
-    left: 20px;
-    width: 40px;
-    height: 40px; 
-    background-color: #150552;
-    border-radius: 50%; /* Make it circular */
-    color: white; /* Adjust text color if needed */
-    text-align: center;
-    line-height: 40px; /* Vertically center the text */
-    cursor: pointer;
-    z-index: 2;
-  }
