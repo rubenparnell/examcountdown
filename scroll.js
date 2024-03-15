@@ -5,7 +5,6 @@ const sideMenu = document.getElementById('side-menu');
 function handleScroll() {
     const isPhoneScreen = window.matchMedia("(max-width: 600px)").matches;
     const scrollPosition = parseInt(window.scrollY || document.body.scrollTop || document.documentElement.scrollTop);
-    console.log(scrollPosition);
 
     let threshold = isPhoneScreen ? 100 : 30;
 
