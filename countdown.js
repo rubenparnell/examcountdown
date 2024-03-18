@@ -5,11 +5,8 @@ import { timeUntilExam } from './shared.js';
   for (let i = 0; i < exams.length; i++){
     let exam = exams[i]
     const timeUntil = timeUntilExam(exam);
-    console.log(`${exam.subject} ${exam.unitTitle}: ${timeUntil}`)
     exams[i].timeTo = timeUntil
   }
-
-console.log(exams)
 
 function populateCellsWithExamData() {
 // Filter exams to include only upcoming exams

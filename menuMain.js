@@ -219,21 +219,17 @@ function loadSavedCheckboxStates() {
                     totalSubjects: 0,
                     header: document.getElementById(`${sectionId}Header`),
                 };
-                console.log("here",sectionVisibilityMap[sectionId])
     
                 // Increment totalSubjects for the section
                 sectionVisibilityMap[sectionId].totalSubjects++;
             }
         });
-    
-        console.log("SVM", sectionVisibilityMap);
         
         // Delay visibility update until all elements are processed
         setTimeout(() => {
             // Hide or show the section headers based on the visibility status
             for (const sectionId in sectionVisibilityMap) {
                 const { count, totalSubjects, header } = sectionVisibilityMap[sectionId];
-                console.log(sectionVisibilityMap[sectionId]);
                 if (header) {
                     if (count === 0) {
                         header.closest('tr').style.display = 'none';

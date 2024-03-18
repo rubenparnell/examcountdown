@@ -145,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Load saved checkbox states on page load
     let savedStates = loadSavedCheckboxStates();
-    console.log(savedStates)
   
     // // Initial update of subject visibility
     // updateSubjectVisibility();

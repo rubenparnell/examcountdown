@@ -1,4 +1,7 @@
-function liveViews(response) {
-    document.getElementById('visits').innerText = response.value;
-}
-// The function is called in the CDN on HTML.
+import {CounterAPI} from "counterapi";
+
+const counter = new CounterAPI();
+
+counter.up("examcountdown", "views").then((res) => {
+    console.log(res)
+})
