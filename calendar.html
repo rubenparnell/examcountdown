@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Exams to Calendar</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="menu-styles.css">
+    </head>
+    <body>
+
+        <div id="main">
+            <h1>Google Calendar Upload File Creation</h1>
+            <div class="spacing"></div>
+            <p>If you would like to add all exams to your Google Calendar, you can subscribe using <a href="https://calendar.google.com/calendar/u/1?cid=MzA0YTVjZGQ5Y2VlZDI0NmFiYjNlZDY1NDViOTA2Zjk2MGJiZjg5NDQ0ZDFjNWEyMWM1OTc0NTAwNmYwODMxM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank">this link</a></p>
+            <p>Alternatively, Select the specific subjects that you would like to upload to your google calendar using the check boxes, then press the download button at the bottom of the page.</p>
+            <p>Then, on Google Calendar, go to Settings, Import & Export (left panel), and select the donwloaded file.</p>
+            <p>Note, you may want to create a new calendar fist and then select that when uploading the file.</p>
+            
+          </div>
+
+        <table class="centre">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Board</th>
+                <th>Exam</th>
+                <th>Unit Code</th>
+                <th>Unit Title</th>
+                <th>Duration</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Subject</th>
+                <th>Start Date</th>
+                <th>Select</th>
+            </tr>
+            </thead>
+            <tbody id="exam-data"></tbody>
+        </table>
+        <br>
+        <button id="download-button">Download Selected Exams</button>
+        <br>
+        <br>
+        <br>
+
+        <script src="calendar.js" type="module"></script>
+        <script src="menuMain.js" type="module"></script>
+    </body>
+</html>

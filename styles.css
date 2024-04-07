@@ -113,17 +113,17 @@ footer {
 }
 
 /* Menu Button */
-#open-menu-btn, #timetable-btn {
+#open-menu-btn, #timetable-btn, #calendar-btn {
     background-color: #150552;
     color: white; /* Adjust text color if needed */
     text-align: center;
     cursor: pointer;
     z-index: 2;
     position: fixed;
-    top: 30px;
   }
 
 #open-menu-btn {
+    top: 30px;
     border-radius: 50%; /* Make it circular */
     line-height: 40px; /* Vertically center the text */
     left: 20px;
@@ -133,6 +133,7 @@ footer {
 
 /* Timetable Button */
 #timetable-btn {
+    top: 30px;
     right: 20px;
     height: 50px;
     border-radius: 15px;
@@ -144,6 +145,18 @@ footer {
     text-decoration: underline;
   }
 
+#calendar-btn {
+    top: 90px;
+    right: 20px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: underline;
+}
 /* PHONE ONLY: */
 @media only screen and (max-width: 600px) {
     #open-menu-btn, #timetable-btn {
