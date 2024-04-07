@@ -17,27 +17,29 @@
             <p>Then, in Google Calendar, go to Settings, Import & Export (left panel), and select the donwloaded file.</p>
             <p>Note: you may want to create a new calendar fist and then select that when uploading the file.</p>
             
-          </div>
+        </div>
 
-        <table class="centre">
+        <table id="lessonTable" class="centre">
             <thead>
-            <tr>
-                <th>Title</th>
-                <th>Date</th>
-                <th>Start Time</th>
-                <th>End Time</th>
-                <th>Unit Code</th>
+                <tr>
+                <th>Subject</th>
                 <th>Select</th>
-            </tr>
+                </tr>
             </thead>
-            <tbody id="exam-data"></tbody>
+            <tbody>
+            </tbody>
         </table>
         <br>
-        <button id="download-button">Download Selected Exams</button>
+        <button id="download-button">Download CSV</button>
         <br>
         <br>
         <br>
 
-        <script src="calendar.js" type="module"></script>
+        <script type="module">
+            import { createLessonTable, downloadCSV } from './calendar.js';
+        
+            // Create the lesson selection table when the page loads
+            window.onload = createLessonTable;
+        </script>
     </body>
 </html>

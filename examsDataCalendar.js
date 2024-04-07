@@ -15,14 +15,15 @@ function formatExams(exams) {
     const formattedStartDate = startDate.toLocaleDateString('en-GB');
     const formattedSubject = exam.subject.replace(/\b\w/g, function(char) {
         return char.toUpperCase();
-    }).replace(/([A-Z])/g, ' $1') + " | " + exam.unitTitle;
+    }).replace(/([A-Z])/g, ' $1').trim().replace('Pe', 'PE') + " | " + exam.unitTitle;
       
       return {
         "Subject": formattedSubject,
         "Start date": formattedStartDate,
         "Start time": startTime,
         "End time": formattedEndTime,
-        "Description": exam.unitCode
+        "Description": exam.unitCode,
+        "Lesson": exam.subject
       };
   });
 

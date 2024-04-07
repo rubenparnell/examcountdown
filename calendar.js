@@ -1,60 +1,54 @@
-import { formattedExams as examData } from './examsDataCalendar.js' ;
+import { formattedExams as lessonsData } from './examsDataCalendar.js' ;
 
-const tableBody = document.getElementById("exam-data");
-const selectedExams = [];
+// Function to format lesson names for display in the table
+function formatLessonName(lesson) {
+  // Add spaces between camelCase or PascalCase words
+  let spacedLesson = lesson.replace(/([a-z])([A-Z])/g, '$1 $2');
+  // Capitalize each word in the lesson name
+  let capitalizedLesson = spacedLesson.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
+  // Replace "Pe" with "PE"
+  capitalizedLesson = capitalizedLesson.replace("Pe", "PE");
+  return capitalizedLesson;
+}
 
-function downloadCSV(data) {
-    // Define headers for the CSV
-    const headers = "Subject,Start date,Start time,End time,Description";
-  
-    // Create a string for CSV content
-    const csvContent = [headers, ...data.map(exam => Object.values(exam).join(","))].join("\n");
-  
-    const csvBlob = new Blob([csvContent], { type: "text/csv;charset=utf-8" });
-    const csvUrl = URL.createObjectURL(csvBlob);
-    const link = document.createElement("a");
-    link.href = csvUrl;
-    link.download = "selected_exams.csv";
-    link.click();
-  }
-  
+// Function to create the lesson selection table
+export function createLessonTable() {
+  const uniqueLessons = Array.from(new Set(lessonsData.map(item => item.Lesson)));
+  const tbody = document.querySelector("#lessonTable tbody");
+  tbody.innerHTML = "";
 
-examData.forEach((exam, index) => {
-  const row = document.createElement("tr");
-  
-  // Create table cells for each property in exam object
-  for (const key in exam) {
-    const cell = document.createElement("td");
-    const cellText = document.createTextNode(exam[key]);
-    cell.appendChild(cellText);
-    row.appendChild(cell);
-  }
-  
-  // Add a checkbox for selection
-  const checkbox = document.createElement("input");
-  checkbox.type = "checkbox";
-  checkbox.dataset.examIndex = index; // Set data attribute with current index
-  const cell = document.createElement("td");
-  cell.appendChild(checkbox);
-  row.appendChild(cell);
-  
-  tableBody.appendChild(row);
-});
-
-tableBody.addEventListener("change", (event) => {
-    if (event.target.type === "checkbox") {
-      const examIndex = parseInt(event.target.dataset.examIndex); // Get exam index from data attribute#
-      console.log(event.target.dataset.examIndex)
-      console.log(examIndex)
-      if (event.target.checked) {
-        selectedExams.push(examData[examIndex]);
-      } else {
-        selectedExams.splice(selectedExams.indexOf(examData[examIndex]), 1);
-      }
-      console.log(selectedExams);
-    }
+  uniqueLessons.forEach(lesson => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${formatLessonName(lesson)}</td>
+      <td><input type="checkbox" name="lessonCheckbox" value="${lesson}"></td>
+    `;
+    tbody.appendChild(row);
   });
+}
+
+
+// Function to download selected lessons as CSV
+export function downloadCSV() {
+  const headers = "Subject,Start date,Start time,End time,Description\n"; // Add headers
+  
+  const selectedLessons = Array.from(document.querySelectorAll('input[name="lessonCheckbox"]:checked'))
+      .map(checkbox => checkbox.value);
+
+  const filteredLessons = lessonsData.filter(item => selectedLessons.includes(item.Lesson));
+
+  // Convert selected lessons to CSV format with headers
+  const csvContent = "data:text/csv;charset=utf-8," + headers + filteredLessons.map(item => Object.values(item).join(',')).join('\n');
+
+  // Create a link element and trigger download
+  const encodedUri = encodeURI(csvContent);
+  const link = document.createElement("a");
+  link.setAttribute("href", encodedUri);
+  link.setAttribute("download", "selected_exams.csv");
+  document.body.appendChild(link);
+  link.click();
+}
 
 document.getElementById("download-button").addEventListener("click", () => {
-  downloadCSV(selectedExams);
+  downloadCSV();
 });
