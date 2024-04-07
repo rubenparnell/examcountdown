@@ -1,11 +1,11 @@
-import { subjectData as examData } from './examsDataCalendar.js' ;
+import { formattedExams as examData } from './examsDataCalendar.js' ;
 
 const tableBody = document.getElementById("exam-data");
 const selectedExams = [];
 
 function downloadCSV(data) {
     // Define headers for the CSV
-    const headers = "date,time,board,exam,unitCode,unitTitle,durationMins,Start time,End time,Subject,Start date";
+    const headers = "Subject,Start date,Start time,End time,Description";
   
     // Create a string for CSV content
     const csvContent = [headers, ...data.map(exam => Object.values(exam).join(","))].join("\n");

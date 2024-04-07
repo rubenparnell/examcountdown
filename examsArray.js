@@ -375,7 +375,7 @@ export const exams = [
         subject: "geography",
         unitCode: "8035/3",
         unitTitle: "Geography Paper 3",
-        durationMins: "90*",
+        durationMins: 90,
       },
       {
         date: "2024-06-14",

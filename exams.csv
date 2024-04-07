@@ -1,49 +1,49 @@
 date,time,board,subject,unitCode,unitTitle,durationMins
-2024-05-09,am,AQA,Religious Studies,8062/1,Paper 1,105
-2024-05-09,am,OCR,Engineering,R038,Engineering Design,75
-2024-05-09,pm,Edexcel,Drama,1DR0 03,Theatre Makers in Practice,105
-2024-05-10,am,AQA,Combined Biology,8464/B/1F/H,Paper 1 Tier F/H,75
-2024-05-10,am,AQA,Biology,8461/1F/H,Paper 1 Tier F/H,105
-2024-05-10,pm,Edexcel,German,1GN0 1F/H,Listening & Understanding,35
-2024-05-10,pm,Edexcel,German,1GN0 3F/H,Reading & Understanding,45
-2024-05-13,am,AQA,English Literature,8702/1M,Paper 1,105
-2024-05-13,pm,WJEC,Media Studies,C680U10-1,Component 1 (EDUQAS),90
-2024-05-14,am,Edexcel,French,1FR0 1F/H,Listening & Understanding,35
-2024-05-14,am,Edexcel,French,1FR0 3F/H,Reading & Understanding,45
-2024-05-14,pm,Edexcel,Business,1BS0 01,Investigating Small,105
-2024-05-15,am,AQA,History,8145/1B,Paper 1,120
-2024-05-15,pm,AQA,Computer Science,8525/1B,Python,120
-2024-05-16,am,Edexcel,Maths,1MA1 1F/H,Non-Calculator,90
-2024-05-16,pm,AQA,Religious Studies,8062/2,Paper 2,105
-2024-05-17,am,AQA,Combined Chemistry,8464/C/1F/H,Paper 1 Tier F/H,75
-2024-05-17,am,AQA,Chemistry,8462/1F/H,Paper 1 Tier F/H,105
-2024-05-17,pm,AQA,Geography,8035/1,Paper 1,90
-2024-05-20,am,AQA,English Literature,8702/2,Paper 2,135
-2024-05-20,pm,WJEC,Media Studies,C680U10-1,Component 2 (EDUQAS),90
-2024-05-21,am,Edexcel,German,1GN0 4F/H,Writing,75
-2024-05-21,pm,AQA,Computer Science,8520/2,Paper 2,105
-2024-05-21,pm,OCR,Child Development,R057,Health & Wellbeing in,75
-2024-05-22,am,AQA,Combined Physics,8464/P/1F/H,Paper 1 Tier F/H,75
-2024-05-22,am,AQA,Physics,8463/1F/H,Paper 1 Tier F/H,105
-2024-05-22,pm,AQA,PE,8582/1,Paper 1,75
-2024-05-23,am,AQA,English Language,8700/1,Paper 1,105
-2024-05-24,am,Edexcel,French,1FR0 4F/H,Writing,75
-2024-06-03,am,Edexcel,Maths,1MA1 2F/H,Calculator,90
-2024-06-03,pm,AQA,PE,8582/2,Paper 2,75
-2024-06-04,am,AQA,History,8145/2A,Paper 2,120
-2024-06-05,am,AQA,Geography,8035/2,Paper 2,90
-2024-06-05,pm,Edexcel,Business,1BS0 02,Business: Building a,105
-2024-06-06,am,AQA,English Language,8700/2,Paper 2,105
-2024-06-07,am,AQA,Combined Biology,8464/B/2F/H,Paper 2 Tier F/H,75
-2024-06-07,am,AQA,Biology,8461/2F/H,Paper 2 Tier F/H,105
-2024-06-10,am,Edexcel,Maths,1MA1 3F/H,Calculator,90
-2024-06-11,am,AQA,Combined Chemistry,8464/C/2F/H,Paper 2 Tier F/H,75
-2024-06-11,am,AQA,Chemistry,8462/2F/H,Paper 2 Tier F/H,105
-2024-06-11,pm,AQA,Further Maths,8365/1,Paper 1,105
-2024-06-14,am,AQA,Geography,8035/3,Paper 3,75
-2024-06-14,pm,AQA,Combined Physics,8464/P/2F/H,Paper 2 Tier F/H,75
-2024-06-14,pm,AQA,Physics,8463/2F/H,Paper 2 Tier F/H,105
-2024-06-17,pm,Edexcel,Music,1MU0 03,Appraising,105
-2024-06-18,am,AQA,Design Technology,8552/W,Written,120
-2024-06-19,am,AQA,Food,8585,Food preparation and,105
-2024-06-19,am,AQA,Further Maths,8365/2,Paper 2,105
+09/05/2024,am,AQA,Religious Studies,8062/1,Paper 1,105
+09/05/2024,am,OCR,Engineering,R038,Engineering Design,75
+09/05/2024,pm,Edexcel,Drama,1DR0 03,Theatre Makers in Practice,105
+10/05/2024,am,AQA,Combined Biology,8464/B/1F/H,Paper 1 Tier F/H,75
+10/05/2024,am,AQA,Biology,8461/1F/H,Paper 1 Tier F/H,105
+10/05/2024,pm,Edexcel,German,1GN0 1F/H,Listening & Understanding,35
+10/05/2024,pm,Edexcel,German,1GN0 3F/H,Reading & Understanding,45
+13/05/2024,am,AQA,English Literature,8702/1M,Paper 1,105
+13/05/2024,pm,WJEC,Media Studies,C680U10-1,Component 1 (EDUQAS),90
+14/05/2024,am,Edexcel,French,1FR0 1F/H,Listening & Understanding,35
+14/05/2024,am,Edexcel,French,1FR0 3F/H,Reading & Understanding,45
+14/05/2024,pm,Edexcel,Business,1BS0 01,Investigating Small,105
+15/05/2024,am,AQA,History,8145/1B,Paper 1,120
+15/05/2024,pm,AQA,Computer Science,8525/1B,Python,120
+16/05/2024,am,Edexcel,Maths,1MA1 1F/H,Non-Calculator,90
+16/05/2024,pm,AQA,Religious Studies,8062/2,Paper 2,105
+17/05/2024,am,AQA,Combined Chemistry,8464/C/1F/H,Paper 1 Tier F/H,75
+17/05/2024,am,AQA,Chemistry,8462/1F/H,Paper 1 Tier F/H,105
+17/05/2024,pm,AQA,Geography,8035/1,Paper 1,90
+20/05/2024,am,AQA,English Literature,8702/2,Paper 2,135
+20/05/2024,pm,WJEC,Media Studies,C680U10-1,Component 2 (EDUQAS),90
+21/05/2024,am,Edexcel,German,1GN0 4F/H,Writing,75
+21/05/2024,pm,AQA,Computer Science,8520/2,Paper 2,105
+21/05/2024,pm,OCR,Child Development,R057,Health & Wellbeing in,75
+22/05/2024,am,AQA,Combined Physics,8464/P/1F/H,Paper 1 Tier F/H,75
+22/05/2024,am,AQA,Physics,8463/1F/H,Paper 1 Tier F/H,105
+22/05/2024,pm,AQA,PE,8582/1,Paper 1,75
+23/05/2024,am,AQA,English Language,8700/1,Paper 1,105
+24/05/2024,am,Edexcel,French,1FR0 4F/H,Writing,75
+03/06/2024,am,Edexcel,Maths,1MA1 2F/H,Calculator,90
+03/06/2024,pm,AQA,PE,8582/2,Paper 2,75
+04/06/2024,am,AQA,History,8145/2A,Paper 2,120
+05/06/2024,am,AQA,Geography,8035/2,Paper 2,90
+05/06/2024,pm,Edexcel,Business,1BS0 02,Business: Building a,105
+06/06/2024,am,AQA,English Language,8700/2,Paper 2,105
+07/06/2024,am,AQA,Combined Biology,8464/B/2F/H,Paper 2 Tier F/H,75
+07/06/2024,am,AQA,Biology,8461/2F/H,Paper 2 Tier F/H,105
+10/06/2024,am,Edexcel,Maths,1MA1 3F/H,Calculator,90
+11/06/2024,am,AQA,Combined Chemistry,8464/C/2F/H,Paper 2 Tier F/H,75
+11/06/2024,am,AQA,Chemistry,8462/2F/H,Paper 2 Tier F/H,105
+11/06/2024,pm,AQA,Further Maths,8365/1,Paper 1,105
+14/06/2024,am,AQA,Geography,8035/3,Paper 3,90
+14/06/2024,pm,AQA,Combined Physics,8464/P/2F/H,Paper 2 Tier F/H,75
+14/06/2024,pm,AQA,Physics,8463/2F/H,Paper 2 Tier F/H,105
+17/06/2024,pm,Edexcel,Music,1MU0 03,Appraising,105
+18/06/2024,am,AQA,Design Technology,8552/W,Written,120
+19/06/2024,am,AQA,Food,8585,Food preparation and,105
+19/06/2024,am,AQA,Further Maths,8365/2,Paper 2,105
