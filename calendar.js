@@ -13,9 +13,39 @@ function formatLessonName(lesson) {
 
 // Function to create the lesson selection table
 export function createLessonTable() {
-  const uniqueLessons = Array.from(new Set(lessonsData.map(item => item.Lesson)));
+  // const uniqueLessons = Array.from(new Set(lessonsData.map(item => item.Lesson)));
   const tbody = document.querySelector("#lessonTable tbody");
   tbody.innerHTML = "";
+
+  // console.log(uniqueLessons)
+
+  const uniqueLessons = [
+    "englishLanguage",
+    "englishLiterature",
+    "maths",
+    "furtherMaths",
+    "combinedBiology",
+    "biology",
+    "combinedChemistry",
+    "chemistry",
+    "combinedPhysics",
+    "physics",
+    "french",
+    "german",
+    "history",
+    "geography",
+    "religiousStudies",
+    "designTechnology",
+    "engineering",
+    "food",
+    "drama",
+    "music",
+    "business",
+    "computerScience",
+    "mediaStudies",
+    "childDevelopment",
+    "pe"
+  ]
 
   uniqueLessons.forEach(lesson => {
     const row = document.createElement("tr");

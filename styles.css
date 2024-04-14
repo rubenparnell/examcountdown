@@ -113,9 +113,12 @@ footer {
 }
 
 /* Menu Button */
-#open-menu-btn, #timetable-btn, #calendar-btn {
+#open-menu-btn, #timetable-btn, #calendar-btn, #buttons {
     background-color: #150552;
-    color: white; /* Adjust text color if needed */
+    a:link, a:visited {
+        color: white;
+    }
+    color: white;
     text-align: center;
     cursor: pointer;
     z-index: 2;
@@ -123,7 +126,6 @@ footer {
   }
 
 #open-menu-btn {
-    top: 30px;
     border-radius: 50%; /* Make it circular */
     line-height: 40px; /* Vertically center the text */
     left: 20px;
@@ -131,11 +133,14 @@ footer {
     height: 40px;
   }
 
-/* Timetable Button */
-#timetable-btn {
-    top: 30px;
+.spacer{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#buttons {
     right: 20px;
-    height: 50px;
+    height: 40px;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -145,24 +150,35 @@ footer {
     text-decoration: underline;
   }
 
-#calendar-btn {
-    top: 90px;
-    right: 20px;
-    height: 50px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-decoration: underline;
+
+.small{
+    font-size: 20px !important;
 }
-/* PHONE ONLY: */
-@media only screen and (max-width: 600px) {
-    #open-menu-btn, #timetable-btn {
-        top: 100px;
-      }
-    .spacing{
-        padding: 10px;
+
+@media only screen and (max-width: 490px) {
+    .small{
+        font-size: 15px !important;
+    }
+    
+    #buttons {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .spacer{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #buttons {
+        right: 80px !important;
+    }
+    #open-menu-btn {
+        left: 80px !important;
+    }
+    #side-menu {
+        left: 80px !important;
     }
 }

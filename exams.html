@@ -10,20 +10,10 @@
 
     <h1>Exams for {{subjectName}}</h1>
 
-    <button id="back-button" href="index.html">◄</button>
+    <a href="index.html"><button id="back-button">◄</button></a>
     <div id="exam-table"></div>
 
     <script src="specificCountdown.js" type="module"></script>
     <script src="shared.js" type="module"></script>
-    <script>
-      // Select the back button
-      const backButton = document.getElementById("back-button");
-
-      // Add a click event listener to the button
-      backButton.addEventListener("click", () => {
-        // Redirect to the desired page using window.location.href
-        window.location.href = "index.html";
-      });
-    </script>
   </body>
 </html>
