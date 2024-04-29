@@ -51,7 +51,7 @@ export const exams = [
       subject: "german",
       unitCode: "1GN0 1F/H",
       unitTitle: "Listening & Understanding in German",
-      durationMins: 35,
+      durationMins: "35/ 45",
     },
     {
       date: "2024-05-10",
@@ -60,7 +60,7 @@ export const exams = [
       subject: "german",
       unitCode: "1GN0 3F/H",
       unitTitle: "Reading & Understanding in German",
-      durationMins: 45,
+      durationMins: "45/ 60",
     },
     {
       date: "2024-05-13",
@@ -87,7 +87,7 @@ export const exams = [
       subject: "french",
       unitCode: "1FR0 1F/H",
       unitTitle: "Listening & Understanding in French",
-      durationMins: 35,
+      durationMins: "35/ 45",
     },
     {
       date: "2024-05-14",
@@ -96,7 +96,7 @@ export const exams = [
       subject: "french",
       unitCode: "1FR0 3F/H",
       unitTitle: "Reading & Understanding in French",
-      durationMins: 45,
+      durationMins: "45/ 60",
     },
     {
       date: "2024-05-14",
@@ -195,7 +195,7 @@ export const exams = [
         subject: "german",
         unitCode: "1GN0 4F/H",
         unitTitle: "Writing in German",
-        durationMins: 75,
+        durationMins: "75/ 80",
       },
       {
         date: "2024-05-21",
@@ -258,7 +258,7 @@ export const exams = [
         subject: "french",
         unitCode: "1FR0 4F/H",
         unitTitle: "Writing in French",
-        durationMins: 75,
+        durationMins: "75/ 80",
       },
       {
         date: "2024-06-03",
