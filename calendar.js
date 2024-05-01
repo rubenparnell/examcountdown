@@ -50,7 +50,7 @@ export function createLessonTable() {
   uniqueLessons.forEach(lesson => {
     const row = document.createElement("tr");
 
-    if (uniqueLessons=="englishLanguage" or uniqueLessons=="englishLiterature" or uniqueLessons=="maths"){
+    if (uniqueLessons=="englishLanguage" || uniqueLessons=="englishLiterature" || uniqueLessons=="maths"){
       row.innerHTML = `
       <td>${formatLessonName(lesson)}</td>
       <td><input type="checkbox" name="lessonCheckbox" value="${lesson}" checked></td>
