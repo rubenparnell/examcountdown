@@ -49,10 +49,19 @@ export function createLessonTable() {
 
   uniqueLessons.forEach(lesson => {
     const row = document.createElement("tr");
-    row.innerHTML = `
+
+    if (uniqueLessons=="englishLanguage" or uniqueLessons=="englishLiterature" or uniqueLessons=="maths"){
+      row.innerHTML = `
+      <td>${formatLessonName(lesson)}</td>
+      <td><input type="checkbox" name="lessonCheckbox" value="${lesson}" checked></td>
+    `;
+    } else {
+      row.innerHTML = `
       <td>${formatLessonName(lesson)}</td>
       <td><input type="checkbox" name="lessonCheckbox" value="${lesson}"></td>
     `;
+    }
+    
     tbody.appendChild(row);
   });
 }
