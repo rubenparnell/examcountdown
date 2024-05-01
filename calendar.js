@@ -50,6 +50,8 @@ export function createLessonTable() {
   uniqueLessons.forEach(lesson => {
     const row = document.createElement("tr");
 
+    cosole.log(uniqueLessons)
+
     if (uniqueLessons=="englishLanguage" || uniqueLessons=="englishLiterature" || uniqueLessons=="maths"){
       row.innerHTML = `
       <td>${formatLessonName(lesson)}</td>
