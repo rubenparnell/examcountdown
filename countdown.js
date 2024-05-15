@@ -9,42 +9,47 @@ import { timeUntilExam } from './shared.js';
   }
 
 function populateCellsWithExamData() {
-// Filter exams to include only upcoming exams
-const upcomingExams = exams.filter((exam) => exam.timeTo !== "Exam has already started or finished");
+  // Filter exams to include only upcoming exams
+  const upcomingExams = exams.filter((exam) => exam.timeTo !== "Exam already started/ finished");
 
-// Sort upcoming exams by date and time (earliest first)
-upcomingExams.sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    if (dateA > dateB) return -1;
-    if (dateA < dateB) return 1;
+  // Sort upcoming exams by date and time (earliest first)
+  upcomingExams.sort((a, b) => {
+    const [dayA, monthA, yearA] = a.date.split(' ')[1].split('/'); // Extract day, month, year from date A
+    const formattedDateA = `20${yearA}-${monthA}-${dayA}`; // Construct date string for A
+
+    const [dayB, monthB, yearB] = b.date.split(' ')[1].split('/'); // Extract day, month, year from date B
+    const formattedDateB = `20${yearB}-${monthB}-${dayB}`; // Construct date string for B
+
+    if (formattedDateA < formattedDateB) return 1;
+    if (formattedDateA > formattedDateB) return -1;
     return a.time.localeCompare(b.time); // Compare times if dates are equal
-});
+  });
 
-// Iterate through the upcoming exams and populate table cells
-upcomingExams.forEach((exam) => {
-    exam.timeTo = timeUntilExam(exam);
-    const subject = exam.subject; // Ensure consistent formatting for ID
+  console.log(upcomingExams);
 
-    const unitTitleId = `unitTitle-${subject}`;
-    const durationId = `duration-${subject}`;
-    const dateId = `date-${subject}`;
-    const countdownId = `countdown-${subject}`;
 
-    const unitTitleCell = document.getElementById(unitTitleId);
-    const durationCell = document.getElementById(durationId);
-    const dateCell = document.getElementById(dateId);
-    const countdownCell = document.getElementById(countdownId);
+  // Iterate through the upcoming exams and populate table cells
+  upcomingExams.forEach((exam) => {
+      exam.timeTo = timeUntilExam(exam);
+      const subject = exam.subject; // Ensure consistent formatting for ID
 
-    if (countdownCell) {
-        unitTitleCell.textContent = exam.unitTitle
-        durationCell.textContent = exam.durationMins
-        dateCell.textContent = exam.date
-        countdownCell.textContent = exam.timeTo;
-    }
+      const unitTitleId = `unitTitle-${subject}`;
+      const durationId = `duration-${subject}`;
+      const dateId = `date-${subject}`;
+      const countdownId = `countdown-${subject}`;
 
-    // Add code here to populate other cells as needed, using IDs like "unitCode-subject", "duration-subject", etc.
-});
+      const unitTitleCell = document.getElementById(unitTitleId);
+      const durationCell = document.getElementById(durationId);
+      const dateCell = document.getElementById(dateId);
+      const countdownCell = document.getElementById(countdownId);
+
+      if (countdownCell) {
+          unitTitleCell.textContent = exam.unitTitle
+          durationCell.textContent = exam.durationMins
+          dateCell.textContent = exam.date
+          countdownCell.textContent = exam.timeTo;
+      }
+  });
 }
 
 // Call the function when the page loads

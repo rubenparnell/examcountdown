@@ -1,13 +1,17 @@
 export function timeUntilExam(exam) {
     const examDate = exam.date;
+    const examDateParts = examDate.split(' '); // Split the date string by space
+    const [day, month, year] = examDateParts[1].split('/'); // Split the day, month, and year
+    const formattedDate = `20${year}-${month}-${day}`; // Construct the date string in yyyy-mm-dd format
+
     const examTime = exam.time === "am" ? "09:00" : "13:30"; // Set exam times as specified
-    const examDateTime = new Date(`${examDate}T${examTime}`);
+    const examDateTime = new Date(`${formattedDate}T${examTime}`);
   
     const now = new Date();
   
     // Ensure exam time is in the future
     if (examDateTime <= now) {
-      return "Exam has already started or finished";
+      return "Exam already started/ finished";
     }
   
     const differenceInMilliseconds = examDateTime - now;

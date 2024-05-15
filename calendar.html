@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Add Exams to Calendar</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="menu-styles.css">
-    </head>
-    <body>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Exams to Calendar</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu-styles.css">
+</head>
+<body>
 
-        <a href="index.html"><button id="back-button">◄</button></a>
+    <a href="index.html"><button id="back-button">◄</button></a>
 
-        <div id="main">
-            <h1>Google Calendar Uploadable File Creation</h1>
-            <div class="spacing"></div>
-            <p>If you would like to add all exams to your Google Calendar, you can subscribe using <a href="https://calendar.google.com/calendar/u/1?cid=MzA0YTVjZGQ5Y2VlZDI0NmFiYjNlZDY1NDViOTA2Zjk2MGJiZjg5NDQ0ZDFjNWEyMWM1OTc0NTAwNmYwODMxM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank">this link</a>.</p>
-            <p>Alternatively, select the specific subjects that you would like to upload to your google calendar using the check boxes, then press the download button at the bottom of the page.</p>
-            <p>Then, in <a href="https://calendar.google.com/calendar/u/1/r/settings/export?pli=1">Google Calendar, go to Settings, Import & Export (left panel)</a>, and select the donwloaded file.</p>
-            <p><b>Note: you may want to create a new calendar fist, as all events will be added to the selected calendar.</b></p>
-            
-        </div>
+    <div id="main">
+        <h1>Google Calendar Uploadable File Creation</h1>
+        <div class="spacing"></div>
+        <p>If you would like to add all exams to your Google Calendar, you can subscribe using <a href="https://calendar.google.com/calendar/u/1?cid=MzA0YTVjZGQ5Y2VlZDI0NmFiYjNlZDY1NDViOTA2Zjk2MGJiZjg5NDQ0ZDFjNWEyMWM1OTc0NTAwNmYwODMxM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank">this link</a>.</p>
+        <p>Alternatively, select the specific subjects that you would like to upload to your google calendar using the check boxes, then press the download button at the bottom of the page.</p>
+        <p>Then, in <a href="https://calendar.google.com/calendar/u/1/r/settings/export?pli=1" target=”_blank”>Google Calendar, go to Settings, Import & Export (left panel)</a>, and select the donwloaded file.</p>
+        <p><b>Note: you may want to create a new calendar fist, as all events will be added to the selected calendar.</b></p>
 
-        <table id="lessonTable" class="centre">
-            <thead>
-                <tr>
+        <label for="amTime">AM Exam Time:</label>
+        <input type="time" id="amTime" name="amTime" value="09:00">
+        <br>
+        <label for="pmTime">PM Exam Time:</label>
+        <input type="time" id="pmTime" name="pmTime" value="13:30">
+    </div>
+
+    <table id="lessonTable" class="centre">
+        <thead>
+            <tr>
                 <th>Subject</th>
                 <th>Select</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-        <br>
-        <button id="download-button">Download CSV</button>
-        <br>
-        <br>
-        <br>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <br>
+    <button id="download-button">Download CSV</button>
+    <br>
+    <br>
+    <br>
 
-        <script type="module">
-            import { createLessonTable, downloadCSV } from './calendar.js';
-        
-            // Create the lesson selection table when the page loads
-            window.onload = createLessonTable;
-        </script> 
-    </body>
+    <script type="module">
+        import { createLessonTable, downloadCSV } from './calendar.js';
+    
+        // Create the lesson selection table when the page loads
+        window.onload = createLessonTable;
+    </script> 
+</body>
 </html>
