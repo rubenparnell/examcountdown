@@ -280,7 +280,7 @@ export const exams = [
   },
   {
     date: "Tue 04/06/24",
-    time: "am",
+    time: "pm",
     board: "AQA",
     subject: "history",
     unitCode: "8145/2A",
