@@ -316,7 +316,7 @@ export const exams = [
   },
   {
     date: "Fri 07/06/24",
-    time: "am",
+    time: "pm",
     board: "AQA",
     subject: "combinedBiology",
     unitCode: "8464/B/2F/H",
@@ -325,7 +325,7 @@ export const exams = [
   },
   {
     date: "Fri 07/06/24",
-    time: "am",
+    time: "pm",
     board: "AQA",
     subject: "biology",
     unitCode: "8461/2F/H",
